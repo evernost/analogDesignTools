@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\section*{Current source circuit}
+
+\begin{circuitikz}
+	% Paths, nodes and wires:
+	\draw node[npn] at (7, 4) {};
+	\draw (7, 2.25) to[american resistor, l={$R_E$}, label distance=0.02cm,/tikz/circuitikz/bipoles/length=0.700cm] (7, 3.23);
+	\draw node[eground] at (7, 2.25) {};
+	\draw (5.25, 2.25) to[american resistor, l={$R_{GND}$}, label distance=0.02cm,/tikz/circuitikz/bipoles/length=0.700cm] (5.25, 3.23);
+	\draw (3.52, 4) to[american resistor, l={$R_{S}$}, label distance=0.02cm,/tikz/circuitikz/bipoles/length=0.700cm] (4.5, 4);
+	\draw (4.5, 4) -- (6.16, 4);
+	\draw (5.25, 3.23) -| (5.25, 4);
+	\draw node[circ] at (5.25, 4) {};
+	\draw node[eground] at (5.25, 2.25) {};
+	\draw (3.02, 4) -- (3.52, 4) |- (3.02, 4);
+	\draw (7, 4.77) to[ammeter] (7, 6.75);
+	\draw node[vcc] at (7, 6.75) {};
+	\draw node[ocirc] at (3.02, 4) {};
+\end{circuitikz}
+
+\end{document}
+
